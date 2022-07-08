@@ -1,7 +1,6 @@
 // Timer
 let timerCounter = 0;
 
-
 window.addEventListener('load', () => {
     startSlide();
     sliderInterval = setInterval(startSlide, 1000);
@@ -32,6 +31,7 @@ function resetTimer() {
 }
 
 // Slider
+
 let sliderIntervalFoto;
 let sliderCounterFoto = 0;
 const MAX_FOTO = 7;
@@ -63,23 +63,6 @@ function nextSlideFoto() {
 
 // slider prev next
 
-
-// let counterSlider = 0;
-// const MAX_FOTOPN = 7;
-
-// document.querySelector(".next").addEventListener('click', nextFoto);
-
-// function nextFoto() {
-//     if (counterSlider > MAX_FOTOPN-1) {
-//         counterSlider = 1;
-//     } else {
-//         counterSlider++
-//     }
-//   let newFotoPN = `url(images/${counterSlider}.jpg)`;
-//   document.querySelector('.slideImagePN').style.backgroundImage = newFotoPN;
-// }
-
-
 let counterSlider = 0;
 const MAX_FOTOPN = 7;
 
@@ -104,40 +87,6 @@ document.querySelector(".prev").addEventListener('click', () => {
     console.log(newFotoPN);
 });
 
-
-// let imagesCounter = 0;
-
-// document.querySelector('.next').addEventListener('click', () => {
-//     let targetDiv = document.querySelector(".slideImagePN");
-//     if (imagesCounter > MAX_FOTO-1) {
-//         imagesCounter = 1;
-//     } else {
-//         imagesCounter++;
-//     }
-//     let newImage = "images/" + imagesCounter + ".jpg";
-//     targetDiv.style.backgroundImage = "url(" + newImage + ")";
-//     console.log(newImage)
-
-// });
-
-
-// let imagesCounter = 0;
-
-// document.querySelector('.next').addEventListener('click', () => {
-
-//     if (imagesCounter > MAX_FOTO-1) {
-//         imagesCounter = 1;
-//     } else {
-//         imagesCounter++;
-//     }
-//     let newImage = `url(images/${imagesCounter}.jpg)`;
-//     document.querySelector(".slideImagePN").style.backgroundImage = newImage;
-//     console.log(newImage)
-
-// });
-
-// slider prev next and drops
-
 let counterDrops = 0;
 const MAX_FOTODROPS = 10;
 
@@ -152,7 +101,6 @@ document.querySelector('.nextD').addEventListener('click', () => {
     console.log(newFotoDrops);
 });
 
-
 document.querySelector('.prevD').addEventListener('click', () => {
     if (counterDrops <= 1) {
         counterDrops = MAX_FOTODROPS;
@@ -163,16 +111,6 @@ document.querySelector('.prevD').addEventListener('click', () => {
     document.querySelector('.slideImageDrops').style.backgroundImage = newFotoDrops;
     console.log(newFotoDrops);
 });
-
-
-
-
-
-// let drp = document.querySelector('.drp' + i).addEventListener("click", () => {
-//     document.querySelector('.slideImageDrops').style.backgroundImage = `url("images/img${i}.jpg")`;
-//     document.querySelector('.drp' + i).style.backgroundColor = "rgba(0, 0, 0, 0.699)";
-// });
-
 
 // 1
 document.querySelector('.drp1').addEventListener('click', () => {
@@ -241,14 +179,11 @@ function currentDiv(n) {
     showDivs(slideIndex = n);
 }
 // функция для кнопок demo
-
 function showDivs(n) {
     // главная функция
     var i;
-
     var x = document.getElementsByClassName("mySlides");
     // переменная,картинка с классом mySlides
-   
     if (n > x.length) { slideIndex = 1 }
     //  если аргумент n больше длины массива, то slideIndex равен 1
     if (n < 1) { slideIndex = x.length }
@@ -258,7 +193,6 @@ function showDivs(n) {
         x[i].style.display = "none";
         //   если условия выполнены, то фото х с индексом  [i] делаем display = "none"
     }
-
     x[slideIndex - 1].style.display = "block";
 }
 
@@ -277,7 +211,7 @@ function grandFuncOrange(number) {
     let index = 0;
 
     let imgOrange = document.getElementsByClassName('mySlidesOrange');
-    
+
 
     if (number > imgOrange.length) {
         indexOrange = 1;
@@ -288,7 +222,7 @@ function grandFuncOrange(number) {
     for (index = 0; index < imgOrange.length; index++) {
         imgOrange[index].style.display = "none";
     }
-    imgOrange[indexOrange-1].style.display = "block";
+    imgOrange[indexOrange - 1].style.display = "block";
 };
 
 
