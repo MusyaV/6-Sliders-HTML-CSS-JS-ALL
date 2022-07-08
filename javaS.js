@@ -4,7 +4,6 @@ let timerCounter = 0;
 window.addEventListener('load', () => {
     startSlide();
     sliderInterval = setInterval(startSlide, 1000);
-
 })
 
 function startSlide() {
@@ -25,9 +24,7 @@ function stopTimer() {
 document.querySelector('.resetTimer').addEventListener('click', resetTimer);
 
 function resetTimer() {
-
     timerCounter = 0;
-
 }
 
 // Slider
@@ -116,8 +113,6 @@ document.querySelector('.prevD').addEventListener('click', () => {
 document.querySelector('.drp1').addEventListener('click', () => {
     document.querySelector('.slideImageDrops').style.backgroundImage = 'url("images/img1.jpg")';
     document.querySelector('.drp1').style.backgroundColor = "rgba(0, 0, 0, 0.699)";
-
-
 });
 // 2
 document.querySelector('.drp2').addEventListener('click', () => {
@@ -224,11 +219,3 @@ function grandFuncOrange(number) {
     }
     imgOrange[indexOrange - 1].style.display = "block";
 };
-
-
-
-
-
-
-
-
